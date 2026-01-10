@@ -1,1 +1,1 @@
-https://kareltestspecial.github.io/test-medical
+https://athena-cms-factory.github.io/test-medical
