@@ -1,5 +1,5 @@
 import React from 'react';
-import EditableImage from '../../../../factory-templates/components/EditableImage';
+import EditableImage from './EditableImage';
 
 /**
  * Header Component - Medical Sitetype
