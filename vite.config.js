@@ -17,7 +17,7 @@ if (fs.existsSync(pluginPath)) {
 }
 
 export default defineConfig({
-  base: './', 
+  base: '/test-medical/', 
   plugins: [
     react(),
     tailwindcss(),
