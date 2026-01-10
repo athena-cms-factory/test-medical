@@ -1,0 +1,20 @@
+[
+  {
+    "titel": "absoluteIndex"
+  },
+  {
+    "titel": "Algemene Geneeskunde",
+    "beschrijving": "Voor al uw dagelijkse medische vragen.",
+    "field3": 0
+  },
+  {
+    "titel": "Cardiologie",
+    "beschrijving": "Gespecialiseerde zorg voor uw hart.",
+    "field3": 1
+  },
+  {
+    "titel": "Dermatologie",
+    "beschrijving": "Zorg voor uw huid en haar.",
+    "field3": 2
+  }
+]
