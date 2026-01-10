@@ -50,9 +50,9 @@ const Section = ({ data }) => {
               }`}>
                 {items.map((item, index) => {
                   // Dynamische key detectie
-                  const titleKey = Object.keys(item).find(k => /naam|specialisatie|dienst/i.test(k));
-                  const imgKey = Object.keys(item).find(k => /foto|afbeelding|portret/i.test(k));
-                  const descKey = Object.keys(item).find(k => /beschrijving|uitleg|functie/i.test(k));
+                  const titleKey = Object.keys(item).filter(k => k !== 'absoluteIndex').find(k => /naam|specialisatie|dienst/i.test(k));
+                  const imgKey = Object.keys(item).filter(k => k !== 'absoluteIndex').find(k => /foto|afbeelding|portret/i.test(k));
+                  const descKey = Object.keys(item).filter(k => k !== 'absoluteIndex').find(k => /beschrijving|uitleg|functie/i.test(k));
                   
                   const rawImg = item[imgKey];
                   const imgSrc = rawImg ? (rawImg.startsWith('http') ? rawImg : `${import.meta.env.BASE_URL}images/${rawImg}`) : null;
