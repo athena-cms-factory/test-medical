@@ -48,7 +48,7 @@ const Section = ({ data }) => {
               <div className={`grid gap-8 ${
                 isContact ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               }`}>
-                {items.map((item, index) => {
+                {items.filter(item => Object.keys(item).some(k => k !== 'absoluteIndex' && !k.startsWith('_'))).map((item, index) => {
                   // Dynamische key detectie
                   const titleKey = Object.keys(item).filter(k => k !== 'absoluteIndex').find(k => /naam|specialisatie|dienst/i.test(k));
                   const imgKey = Object.keys(item).filter(k => k !== 'absoluteIndex').find(k => /foto|afbeelding|portret/i.test(k));
