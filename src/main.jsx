@@ -11,28 +11,28 @@ async function init() {
     let totalRows = 0;
     try { 
         // Forceer lowercase keys voor consistentie in de frontend
-        const tableData = (await import('./data/Praktijk_Info.json')).default;
+        const tableData = (await import('./data/praktijk_info.json')).default;
         data['praktijk_info'] = tableData;
         if (Array.isArray(tableData)) totalRows += tableData.length;
-    } catch (e) { console.warn("Mist Praktijk_Info.json"); }
+    } catch (e) { console.warn("Mist praktijk_info.json"); }
     try { 
         // Forceer lowercase keys voor consistentie in de frontend
-        const tableData = (await import('./data/Specialisaties.json')).default;
+        const tableData = (await import('./data/specialisaties.json')).default;
         data['specialisaties'] = tableData;
         if (Array.isArray(tableData)) totalRows += tableData.length;
-    } catch (e) { console.warn("Mist Specialisaties.json"); }
+    } catch (e) { console.warn("Mist specialisaties.json"); }
     try { 
         // Forceer lowercase keys voor consistentie in de frontend
-        const tableData = (await import('./data/Artsen.json')).default;
+        const tableData = (await import('./data/artsen.json')).default;
         data['artsen'] = tableData;
         if (Array.isArray(tableData)) totalRows += tableData.length;
-    } catch (e) { console.warn("Mist Artsen.json"); }
+    } catch (e) { console.warn("Mist artsen.json"); }
     try { 
         // Forceer lowercase keys voor consistentie in de frontend
-        const tableData = (await import('./data/Info.json')).default;
+        const tableData = (await import('./data/info.json')).default;
         data['info'] = tableData;
         if (Array.isArray(tableData)) totalRows += tableData.length;
-    } catch (e) { console.warn("Mist Info.json"); }
+    } catch (e) { console.warn("Mist info.json"); }
     if (import.meta.env.DEV && totalRows === 0) {
         const banner = document.createElement('div');
         banner.style.cssText = "position:fixed;top:0;left:0;right:0;background:#f59e0b;color:white;text-align:center;padding:8px;font-size:12px;z-index:9999;font-weight:bold;box-shadow:0 2px 4px rgba(0,0,0,0.1);";
